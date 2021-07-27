@@ -1,1 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
+
+@-webkit-keyframes gradientAnimation {
+  0%{background-position:0% 77%}
+  50%{background-position:100% 24%}
+  100%{background-position:0% 77%}
+}
+@-moz-keyframes gradientAnimation {
+  0%{background-position:0% 77%}
+  50%{background-position:100% 24%}
+  100%{background-position:0% 77%}
+}
+@keyframes gradientAnimation {
+  0%{background-position:0% 77%}
+  50%{background-position:100% 24%}
+  100%{background-position:0% 77%}
+}
+
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background: linear-gradient(316deg, #0ef149, #eae61f, #1feada, #d476f0, #c965d4, #ff8900, #ccff00, #00c5ff);
+  background-size: 1600% 1600%;
+
+  -webkit-animation: gradientAnimation 12s ease infinite;
+  -moz-animation: gradientAnimation 12s ease infinite;
+  animation: gradientAnimation 12s ease infinite;
+}
+
+.logo {
+  background: url("src/assets/images/logo.png") center center no-repeat;
+  background-size: contain;
+  min-height: 300px;
+  position: absolute;
+  top: 15vh;
+  left: 10vw;
+  right: 10vw;
+  z-index: 10;
+
+}
